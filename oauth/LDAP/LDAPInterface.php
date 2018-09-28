@@ -23,7 +23,7 @@ interface LDAPInterface
      * @param string @bind_pass
      * The password associated to the service user to bind before search. 
      * 
-     * @return 
+     * @return boolean
      * TRUE if the user is identified and can access to the LDAP server
      * and FALSE if it isn't  
      */
@@ -43,7 +43,7 @@ interface LDAPInterface
      * @param string @user
      * A ldap username or email or sAMAccountName  
      * 
-     * @return 
+     * @return array
      * An array with the user's mail, complete name and directory name.
      */
     public function getDataForMattermost($base_dn, $filter, $bind_dn, $bind_pass, $search_attribute, $user);
